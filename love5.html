@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="love.css">
+    <title>love5</title>
+</head>
+<body>
+    <div class="container">
+        <img src="i8.gif" class="responsive-img" alt="Love Image" width="340px">
+        <h1>tu na maane??</h1>
+        <h3>karu tere guddi lal</h3>
+        <a href="final.html"><button class="yes">Yes</button></a>
+        <button class="no" onclick="moveNoButton()">No</button>
+    </div>
+
+    <script>
+        function moveNoButton() {
+            var container = document.querySelector('.container');
+            var button = document.querySelector('.no');
+            var maxX = container.clientWidth - button.clientWidth;
+            var maxY = container.clientHeight - button.clientHeight;
+            var randomX = Math.floor(Math.random() * maxX);
+            var randomY = Math.floor(Math.random() * maxY);
+            button.style.position = 'absolute';
+            button.style.left = randomX + 'px';
+            button.style.top = randomY + 'px';
+        }
+    </script>
+</body>
+</html>
+ 
